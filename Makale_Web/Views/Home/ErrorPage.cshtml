@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "ErrorPage";
+}
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        @{ 
+            Exception ex = null;
+            if (TempData["Error"]!=null)
+            {
+                ex = TempData["Error"] as Exception;
+            }
+        }
+        <h1>HATA OLUŞTU!!!</h1>
+        <p>
+            LÜTFEN SİSTEM YÖNETİCİSİ İLE İLETİŞİME GEÇİNİZ
+        </p><br />
+        @if (ex!=null)
+        {
+            <b>HATA DETAY:</b>@ex.Message
+        }
+        <br /><br /><br />
+        @BootstrapHelper.Linkbuton("/Home/Index","default","","","ANASAYFAYA GİT")
+    </div>
+</div>
+

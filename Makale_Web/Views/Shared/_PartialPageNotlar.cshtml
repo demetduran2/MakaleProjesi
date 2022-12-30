@@ -1,0 +1,14 @@
+﻿@using Makale_Entities
+@model Not
+
+    <div class="media-body">
+        <div class="media-left">
+            <span class="glyphicon"><h3 class="text-center">@Model.Baslik</h3></span><hr />
+            <p><span class="glyphicon glyphicon">@Model.Text</span></p>
+            <h6 class="text-right">
+                <span class="glyphicon glyphicon-user text-success"></span><b><span style="color:rebeccapurple"> @Model.Kullanici.KullaniciAdi</span></b><br />
+                <span class="glyphicon glyphicon-time">@Model.DegistirmeTarihi.ToString("dd.MM.yy HH:mm")</span><br />
+            </h6>
+        </div>
+    </div>
+
